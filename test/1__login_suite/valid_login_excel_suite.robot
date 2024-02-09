@@ -5,17 +5,11 @@ Resource    ../../resource/base/CommonFunctionality.resource
 Test Setup  Launch browser and navigate to URL
 Test Teardown   Close Browser
 Test Template   Test Template for Valid Login
+Library     DataDriver      file=../../test_data/open_emr_data_excel.xlsx      sheet=valid_login_data
 
 *** Test Cases ***
 
-Test Valid Login 1
-    admin       pass    English (Indian)    OpenEMR
-Test Valid Login 2
-    admin       pass    Danish    OpenEMR
-Test Valid Login 3
-    receptionist       receptionist    English (Indian)    OpenEMR
-Test Valid Login 4
-    accountant       accountant    English (Indian)    OpenEMR
+Test Valid Login ${test_case_id}
 
 *** Keywords ***
 Test Template for Valid Login

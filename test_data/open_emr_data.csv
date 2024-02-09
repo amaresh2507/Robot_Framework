@@ -1,0 +1,4 @@
+${username};${password};${language};${expected_title}
+admin;pass;Danish;OpenEMR
+accountant;accountant;English (Indian);OpenEMR
+receptionist;receptionist;English (Indian);OpenEMR
