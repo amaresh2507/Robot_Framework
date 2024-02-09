@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.11.1 on win32)" generated="20240209 06:23:58.543" rpa="false" schemaversion="4">
+<suite id="s1" name="Invalid Login Suite" source="C:\Users\ASATEESH\PycharmProjects\HealthRecord_Robot\test\1__login_suite\invalid_login_suite.robot">
+<test id="s1-t1" name="Test Invalid Login" line="10">
+<kw name="Launch browser and navigate to URL" library="CommonFunctionality" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240209 06:23:58.709" level="INFO">Opening browser 'googlechrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20240209 06:23:58.709" endtime="20240209 06:24:02.689"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240209 06:24:02.689" endtime="20240209 06:24:02.819"/>
+</kw>
+<kw name="Set Browser Implicit Wait" library="SeleniumLibrary">
+<arg>10s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20240209 06:24:02.819" endtime="20240209 06:24:02.819"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>url=${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20240209 06:24:02.819" level="INFO">Opening url 'http://demo.openemr.io/b/openemr/'</msg>
+<status status="PASS" starttime="20240209 06:24:02.819" endtime="20240209 06:24:06.529"/>
+</kw>
+<status status="PASS" starttime="20240209 06:23:58.709" endtime="20240209 06:24:06.529"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=authUser</arg>
+<arg>john</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240209 06:24:06.529" level="INFO">Typing text 'john' into text field 'id=authUser'.</msg>
+<status status="PASS" starttime="20240209 06:24:06.529" endtime="20240209 06:24:06.620"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>id=clearPass</arg>
+<arg>wick</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20240209 06:24:06.620" level="INFO">Typing password into text field 'id=clearPass'.</msg>
+<msg timestamp="20240209 06:24:06.657" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20240209 06:24:06.693" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20240209 06:24:06.620" endtime="20240209 06:24:06.693"/>
+</kw>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>xpath=//select[@name='languageChoice']</arg>
+<arg>English (Indian)</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20240209 06:24:06.693" level="INFO">Selecting options from selection list 'xpath=//select[@name='languageChoice']' by label English (Indian).</msg>
+<status status="PASS" starttime="20240209 06:24:06.693" endtime="20240209 06:24:06.778"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id=login-button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240209 06:24:06.778" level="INFO">Clicking element 'id=login-button'.</msg>
+<status status="PASS" starttime="20240209 06:24:06.778" endtime="20240209 06:24:08.583"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>xpath=//p[text()='Invalid username or password']</arg>
+<arg>Invalid username or password</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20240209 06:24:08.583" level="INFO">Verifying element 'xpath=//p[text()='Invalid username or password']' contains exact text 'Invalid username or password'.</msg>
+<status status="PASS" starttime="20240209 06:24:08.583" endtime="20240209 06:24:08.609"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20240209 06:24:08.609" endtime="20240209 06:24:10.865"/>
+</kw>
+<status status="PASS" starttime="20240209 06:23:58.709" endtime="20240209 06:24:10.865"/>
+</test>
+<doc>This doc contains test suite for invalid login (push code to GIT)</doc>
+<status status="PASS" starttime="20240209 06:23:58.543" endtime="20240209 06:24:10.865"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Invalid Login Suite">Invalid Login Suite</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
