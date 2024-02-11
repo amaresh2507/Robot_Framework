@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation   This doc contains test suite for valid login (push code to GIT)
+Documentation   This doc contains test suite for valid login, run on jenkins (push code to GIT)
 
 Resource    ../../resource/base/CommonFunctionality.resource
 Test Setup  Launch browser and navigate to URL
